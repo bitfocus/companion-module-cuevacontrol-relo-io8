@@ -1,6 +1,12 @@
 # companion-module-cuevacontrol-relo-io8
 
-Companion module for the **Cueva Control RELO-IO8** 8-relay / 8-input Ethernet I/O module. Connects over WebSocket and gives Companion full real-time control of relays, nodes, and presets.
+Companion module for the **Cueva Control RELO-IO8** 8-relay / 8-input Ethernet I/O module. Gives Companion full real-time control of relays, nodes, and presets.
+
+The **RELO-IO8** is a professional Ethernet I/O module built for automation and control. It features 8 relay outputs, 8 digital inputs, a built-in node-based automation engine, and full cloud connectivity via Cueva Horizon. Powered over PoE+ or USB-C, rack and wall mountable.
+
+Supports TCP, UDP, HTTP, OSC, and Art-Net alongside the Companion integration.
+
+For product documentation visit **[cuevacontrol.com](https://cuevacontrol.com)**.
 
 ---
 
@@ -29,9 +35,9 @@ Open the module configuration in Companion and fill in:
 | Field | Description |
 |---|---|
 | **Host** | IP address of the RELO-IO8 on your network |
-| **Auth Token** | 64-character hex token found in the device settings page |
+| **Auth Token** | Integration token found in the device settings under **Security → Integrations** |
 
-The module connects via WebSocket (`ws://<host>/ws`) and automatically reconnects if the connection drops.
+The module connects automatically and reconnects if the connection drops.
 
 ---
 
@@ -54,7 +60,7 @@ The module connects via WebSocket (`ws://<host>/ws`) and automatically reconnect
 
 | Variable | Description |
 |---|---|
-| `$(instance:connected)` | WebSocket connected (`true` / `false`) |
+| `$(instance:connected)` | `true` when connected to the device |
 | `$(instance:device_name)` | Device name |
 | `$(instance:device_id)` | Unique hardware ID |
 | `$(instance:ip)` | Device IP address |
@@ -90,7 +96,7 @@ The module connects via WebSocket (`ws://<host>/ws`) and automatically reconnect
 ## Development Notes
 
 - The module uses the `@companion-module/base` v1 SDK.
-- State is kept in sync via a persistent WebSocket connection. A full state dump (`GET_STATE`) is requested on connect and after any Refresh action.
+- State is kept in sync in real time. A full state dump is requested on connect and after any Refresh action.
 - Node and preset dropdowns are populated dynamically from the live device state.
 - The pulse action is implemented client-side: the module sends `SET_RELAY on`, waits the requested duration, then sends `SET_RELAY off`.
 - Uptime is incremented locally every second after the initial value is received from the device.
