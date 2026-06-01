@@ -1,12 +1,12 @@
-# Cueva Control RELO-IO8
+# Cueva Control RELO IO8
 
-The **Cueva Control RELO-IO8** is an Ethernet I/O module built for professional automation and control. It features 8 relay outputs, 8 digital inputs, a built-in automation engine, and full cloud connectivity — designed to work standalone or as part of a larger system.
+The **Cueva Control RELO IO8** is an Ethernet I/O module built for professional automation and control. It features 8 relay outputs, 8 digital inputs, a built-in automation engine, and full cloud connectivity — designed to work standalone or as part of a larger system.
 
 Learn more and find the full product documentation at **[cuevacontrol.com](https://cuevacontrol.com)**.
 
 ---
 
-## What the RELO-IO8 supports
+## What the RELO IO8 supports
 
 **I/O**
 - 8 relay outputs — on, off, toggle, or pulse with configurable duration
@@ -22,7 +22,7 @@ Learn more and find the full product documentation at **[cuevacontrol.com](https
 - Node-based visual automation engine
 - Relay presets — save and recall multi-relay states instantly
 - Real-time clock (RTC) for time-based triggers
-- Multi-device support — pair multiple RELO-IO8 units together
+- Multi-device support — pair multiple RELO IO8 units together
 
 **Management**
 - Desktop app for full configuration and monitoring
@@ -33,7 +33,7 @@ Learn more and find the full product documentation at **[cuevacontrol.com](https
 
 ## Companion Connection Setup
 
-1. Set the **Host** to the IP address of the RELO-IO8.
+1. Set the **Host** to the IP address of the RELO IO8.
 2. Paste the **Auth Token** from the device settings under **Settings - Integrations**.
 
 The module connects automatically and reconnects if the connection drops.
@@ -121,4 +121,4 @@ Variables update live from the device. Replace `instance` with your connection l
 
 - Relay and input states update automatically whenever they change on the device.
 - Node and preset lists update live. Use **Refresh Device State** if a dropdown still shows stale data after making changes on the device.
-- For more information about the RELO-IO8 visit [cuevacontrol.com](https://cuevacontrol.com).
+- For more information about the RELO IO8 visit [cuevacontrol.com](https://cuevacontrol.com).

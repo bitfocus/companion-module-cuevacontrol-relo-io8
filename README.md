@@ -1,8 +1,8 @@
 # companion-module-cuevacontrol-relo-io8
 
-Companion module for the **Cueva Control RELO-IO8** 8-relay / 8-input Ethernet I/O module. Gives Companion full real-time control of relays, nodes, and presets.
+Companion module for the **Cueva Control RELO IO8** 8-relay / 8-input Ethernet I/O module. Gives Companion full real-time control of relays, nodes, and presets.
 
-The **RELO-IO8** is a professional Ethernet I/O module built for automation and control. It features 8 relay outputs, 8 digital inputs, a built-in node-based automation engine, and full cloud connectivity via Cueva Horizon. Powered over PoE+ or USB-C, rack and wall mountable.
+The **RELO IO8** is a professional Ethernet I/O module built for automation and control. It features 8 relay outputs, 8 digital inputs, a built-in node-based automation engine, and full cloud connectivity via Cueva Horizon. Powered over PoE+ or USB-C, rack and wall mountable.
 
 Supports TCP, UDP, HTTP, OSC, and Art-Net alongside the Companion integration.
 
@@ -34,7 +34,7 @@ Open the module configuration in Companion and fill in:
 
 | Field | Description |
 |---|---|
-| **Host** | IP address of the RELO-IO8 on your network |
+| **Host** | IP address of the RELO IO8 on your network |
 | **Auth Token** | Integration token found in the device settings under **Security → Integrations** |
 
 The module connects automatically and reconnects if the connection drops.
