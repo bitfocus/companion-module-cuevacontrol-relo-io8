@@ -1,0 +1,22 @@
+{
+	"name": "companion-module-cuevacontrol-relo-io8",
+	"version": "1.0.0",
+	"license": "MIT",
+	"type": "commonjs",
+	"main": "src/main.js",
+	"engines": {
+		"node": "^22"
+	},
+	"scripts": {
+		"build": "companion-module-build --output releases/cuevacontrol-relo-io8-1.0.0",
+		"format": "prettier --write ."
+	},
+	"dependencies": {
+		"@companion-module/base": "^1.14.1",
+		"ws": "^8.18.0"
+	},
+	"devDependencies": {
+		"@companion-module/tools": "^2.0.0",
+		"prettier": "^3.0.0"
+	}
+}
