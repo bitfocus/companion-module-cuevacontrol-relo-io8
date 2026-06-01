@@ -35,7 +35,7 @@ Open the module configuration in Companion and fill in:
 | Field | Description |
 |---|---|
 | **Host** | IP address of the RELO IO8 on your network |
-| **Auth Token** | Integration token found in the device settings under **Security → Integrations** |
+| **Auth Token** | Integration token found in the device settings under **Settings → Integrations** |
 
 The module connects automatically and reconnects if the connection drops.
 
@@ -48,9 +48,12 @@ The module connects automatically and reconnects if the connection drops.
 | **Set Relay** | Turn a relay on, off, toggle it, or pulse it for a configurable duration (ms) |
 | **Execute Node** | Trigger a node by ID. The node list is populated automatically after connecting. |
 | **Apply Preset** | Apply a saved preset from the device. The preset list is populated automatically after connecting. |
-| **Create Preset** | Capture the current state of all 8 relays and save it as a new named preset on the device |
 | **Refresh Device State** | Re-fetch all nodes, presets, relay states, and input states from the device. Useful after making changes in the device UI. |
 | **Set Relay Label** | Update the label of a relay on the device |
+| **Set LED Color** | Set the status LED color |
+| **Set LED Brightness** | Set the status LED brightness (0-255) |
+| **Set LED Effect** | Set the status LED effect (Solid, Blink, Breathing, Rainbow, Chase) |
+| **Set LED On/Off** | Turn the status LED on, off, or toggle it |
 
 ---
 
@@ -90,17 +93,6 @@ The module connects automatically and reconnects if the connection drops.
 |---|---|
 | `$(instance:node_count)` | Number of nodes on the device |
 | `$(instance:preset_count)` | Number of presets on the device |
-
----
-
-## Development Notes
-
-- The module uses the `@companion-module/base` v1 SDK.
-- State is kept in sync in real time. A full state dump is requested on connect and after any Refresh action.
-- Node and preset dropdowns are populated dynamically from the live device state.
-- The pulse action is implemented client-side: the module sends `SET_RELAY on`, waits the requested duration, then sends `SET_RELAY off`.
-- Uptime is incremented locally every second after the initial value is received from the device.
-- Source files are in `src/`. Entry point is `src/main.js`.
 
 ---
 
