@@ -1,15 +1,19 @@
 {
 	"name": "companion-module-cuevacontrol-relo-io8",
 	"version": "1.0.0",
-	"license": "MIT",
-	"type": "commonjs",
 	"main": "src/main.js",
-	"engines": {
-		"node": "^22"
-	},
 	"scripts": {
-		"build": "companion-module-build --output releases/cuevacontrol-relo-io8-1.0.0",
-		"format": "prettier --write ."
+		"format": "prettier -w .",
+		"package": "companion-module-build"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bitfocus/companion-module-cuevacontrol-relo-io8.git"
+	},
+	"engines": {
+		"node": "^22",
+		"yarn": "^4"
 	},
 	"dependencies": {
 		"@companion-module/base": "^1.14.1",
@@ -18,5 +22,7 @@
 	"devDependencies": {
 		"@companion-module/tools": "^2.0.0",
 		"prettier": "^3.0.0"
-	}
+	},
+	"prettier": "@companion-module/tools/.prettierrc.json",
+	"packageManager": "yarn@4.12.0"
 }

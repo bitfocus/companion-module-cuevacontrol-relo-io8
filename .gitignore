@@ -1,6 +1,9 @@
 node_modules/
-dist/
+package-lock.json
+/pkg
+/*.tgz
+DEBUG-*
+/.yarn
+.claude/
+.env
 releases/
-*.tgz
-.DS_Store
-*.log
